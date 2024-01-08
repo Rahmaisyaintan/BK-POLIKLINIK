@@ -36,8 +36,13 @@ if (isset($_GET['aksi'])) {
         </script>";
 }
 ?>
-<h2>Poli</h2>
-<br>
+<section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Poli</h2>
+        </div>
+      </div>
+</section>
 <div class="container">
     <!--Form Input Data-->
 

@@ -31,8 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card" style="background-color: #A9A9A9;">
-                <div class="card-header text-center" style="font-weight: bold; font-size: 32px;">Login</div>
+            <div class="card mt-5" style="background-color: #A9A9A9;">
+            <div class="card-header text-center" style="font-weight: bold; font-size: 32px; background-color:lightblue; font-style:oblique">Login Admin</div>
                 <div class="card-body">
                     <form method="POST" action="index.php?page=loginUser">
                         <?php
@@ -45,15 +45,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         }
                         ?>
                         <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" name="username" class="form-control" required placeholder="Masukkan nama anda">
+                            <label for="username" style="font-size: 20px; font-style:normal">Nama</label>
+                            <input type="text" style="font-size: 17px; font-style:oblique"name="username" class="form-control" required placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" class="form-control" required placeholder="Masukkan password anda">
+                            <label for="no_hp" style="font-size: 20px; font-style:normal">Password</label>
+                            <input type="password" style="font-size: 17px; font-style:oblique" name="password" class="form-control" required placeholder="">
                         </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        <div class="card-login text-center">
+                            <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
                         </div>
                     </form>
                 </div>

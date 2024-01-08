@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $row = $result->fetch_assoc();
         if (($no_hp == $row['no_hp'])) {
             $_SESSION['nama'] = $nama;
+            $_SESSION['id'] = $id;
             header("Location: berandaDokter.php");
         } else {
             $error = "Password salah";
@@ -31,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card">
-                <div class="card-header text-center" style="font-weight: bold; font-size: 32px; background-color: #A9A9A9;">Login</div>
+            <div class="card mt-5">
+                <div class="card-header text-center" style="font-weight: bold; font-size: 32px; background-color:lightblue; font-style:oblique">Login Dokter</div>
                 <div class="card-body">
                     <form method="POST" action="index.php?page=loginDokter">
                         <?php
@@ -45,15 +46,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         }
                         ?>
                         <div class="form-group">
-                            <label for="nama">Nama</label>
-                            <input type="text" name="nama" class="form-control" required placeholder="Masukkan nama anda">
+                            <label for="nama" style="font-size: 20px; font-style:normal">Nama</label>
+                            <input type="text" style="font-size: 17px; font-style:oblique"name="nama" class="form-control" required placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="no_hp">Password</label>
-                            <input type="number" name="no_hp" class="form-control" required placeholder="Masukkan password anda">
+                            <label for="no_hp" style="font-size: 20px; font-style:normal">Password</label>
+                            <input type="number" style="font-size: 17px; font-style:oblique" name="no_hp" class="form-control" required placeholder="">
                         </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        <div class="card-login text-center">
+                            <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
                         </div>
                     </form>
                 </div>
